@@ -10,11 +10,11 @@ const server = express();
 server.use(helmet());
 server.use(express.json());
 
-const actionsRouter = require('/routes/actionsRouter');
+const actionsRouter = require('./routes/actionsRouter');
 const projectsRouter = require('./routes/projectsRouter');
 
-server.use('./projects', projectsRouter);
-server.use('./actions', actionsRouter);
+server.use('/projects', projectsRouter);
+server.use('/actions', actionsRouter);
 
 
 module.exports = server;

@@ -4,6 +4,9 @@
   "main": "index.js",
   "repository": "https://github.com/toddmckenzie/webdb-challenge.git",
   "license": "MIT",
+  "scripts": {
+    "server": "nodemon index.js"
+  },
   "dependencies": {
     "express": "^4.17.1",
     "helmet": "^3.18.0",
