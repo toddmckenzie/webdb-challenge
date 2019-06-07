@@ -5,7 +5,7 @@ const knexConfig = require('../knexfile.js');
 
 const db = knex(knexConfig.development);
 
-
+//working
 router.get('/', (req, res) => {
     db('projects')
         .then(result => {
@@ -15,7 +15,7 @@ router.get('/', (req, res) => {
             res.status(500).json(error)
         })
 })
-
+//working
 router.post('/', (req, res) => {
     db('projects')
         .insert(req.body)
