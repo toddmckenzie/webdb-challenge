@@ -32,7 +32,7 @@ router.post('/', (req, res) => {
 router.get('/', (req, res) => {
     db('projects')
     .join('actions', { "projects.id": "actions.projects_id"})
-    .select('projects.id as id', 'projects.name as name', 'projects.ProjectDescription as description', 'projects.completed as completed', 'actions.id as id', 'actions.WhatNeedsDone as description', 'actions.AddtionalNotes as notes', 'actions.Completed as completed')
+    .select('projects.id as ProjectId','projects.name as name', 'projects.ProjectDescription as description', 'projects.completed as completed', 'actions.id as id', 'actions.WhatNeedsDone as description', 'actions.AddtionalNotes as notes', 'actions.Completed as completed')
         .then(result => {
             res.status(200).json(result)
         })
